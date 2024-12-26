@@ -32,7 +32,7 @@ A Flutter-based Mood Tracker application that allows users to record, track, and
 
 **Technologies Used** <br>
 - Flutter: Cross-platform app development.<br>
-- SQLite: Local data persistence using the sqflite package.<br>
+- SQfLite: Local data persistence using the sqflite package.<br>
 - State Management: Provider-based state management for dynamic UI updates.<br>
 - fl_chart: For creating visually engaging pie charts.<br>
 - Quotes API: Integration for fetching motivational quotes dynamically.
