@@ -1,87 +1,86 @@
 **Mood Tracker App**
-A Flutter-based Mood Tracker application that allows users to record, track, and visualize their emotional patterns over time. The app features mood recording, local data persistence, and motivational quotes, offering a seamless and interactive user experience.
+<br>
+A Flutter-based Mood Tracker application that allows users to record, track, and visualize their emotional patterns over time. The app features mood recording, local data persistence, and motivational quotes, offering a seamless and interactive user experience. <br>
 
-Features
-Mood Recording<br> Users can record their mood with notes and view their entries over time.
+**Features**
+<br> 
+- Mood Recording<br> Users can record their mood with notes and view their entries over time.<br>
 
-Data Visualization<br> View mood trends with dynamic pie charts using the fl_chart package.
+- Data Visualization<br> View mood trends with dynamic pie charts using the fl_chart package.<br>
 
-Motivational Quotes<br> Displays a new motivational quote from an external Quotes API every time the app is opened.
+- Motivational Quotes<br> Displays a new motivational quote from an external Quotes API every time the app is opened.<br>
 
-Data Persistence<br> Uses SQLite for local data storage, ensuring mood entries are saved and persist across app launches.
+- Data Persistence<br> Uses SQLite for local data storage, ensuring mood entries are saved and persist across app launches.<br>
 
-State Management<br> Built with a stateful widget backed by a custom model class, ensuring dynamic updates throughout the app.
+- State Management<br> Built with a stateful widget backed by a custom model class, ensuring dynamic updates throughout the app.<br>
 
-Platform Compatibility<br> The app supports iOS simulators and Android emulators.
+- Platform Compatibility<br> The app supports iOS simulators and Android emulators.<br>
 
-Comprehensive Testing<br> Includes:
+**Comprehensive Testing**<br> Includes:<br>
 
-5+ Unit Tests: To validate model functionality.
-5+ Widget Tests: To verify UI elements and their behavior.
-1 Integration Test: To test workflows and interactions across the app.
-Screens
-Home Screen<br> Displays a pie chart summarizing mood data and a list of all recorded moods.
+- 5+ Unit Tests: To validate model functionality.
+- 5+ Widget Tests: To verify UI elements and their behavior.
+- 1 Integration Test: To test workflows and interactions across the app.
 
-Add Mood Screen<br> Allows users to add new mood entries, including a dropdown for mood selection and a text field for notes.
+**Screens** <br>
 
-Motivational Screen<br> Displays a rotating motivational quote fetched from the external Quotes API.
+- Home Screen<br> Displays a pie chart summarizing mood data and a list of all recorded moods.
 
-Technologies Used
-Flutter: Cross-platform app development.<br>
-SQLite: Local data persistence using the sqflite package.<br>
-State Management: Provider-based state management for dynamic UI updates.<br>
-fl_chart: For creating visually engaging pie charts.<br>
-Quotes API: Integration for fetching motivational quotes dynamically.
-Setup and Installation
-Prerequisites
+- Add Mood Screen<br> Allows users to add new mood entries, including a dropdown for mood selection and a text field for notes.
+
+- Motivational Screen<br> Displays a rotating motivational quote fetched from the external Quotes API.
+
+**Technologies Used** <br>
+- Flutter: Cross-platform app development.<br>
+- SQLite: Local data persistence using the sqflite package.<br>
+- State Management: Provider-based state management for dynamic UI updates.<br>
+- fl_chart: For creating visually engaging pie charts.<br>
+- Quotes API: Integration for fetching motivational quotes dynamically.
+
+**Setup and Installation** <br>
+
+**Prerequisites**<br>
 Ensure you have the following installed on your system:
-
+<br>
 Flutter SDK: Install Flutter<br>
 Dart SDK (comes with Flutter)<br>
 iOS Simulator or Android Emulator
-Steps
-Clone the repository:<br>
 
-bash
-Copy code
-git clone https://github.com/your-username/mood-tracker-app.git
+*Steps*
+Clone the repository:<br>
+git clone https://github.com/mansi2804/mood-tracker-app.git
 cd mood-tracker-app
 Install dependencies:<br>
-
-bash
-Copy code
 flutter pub get
 Run the app on your preferred device:<br>
-
-bash
-Copy code
 flutter run
-Testing
+
+
+**Testing**
 Run the following commands to execute tests:
 
-Unit Tests:<br>
+- Unit Tests:<br>
 
-bash
-Copy code
 flutter test test/unit
-Widget Tests:<br>
 
-bash
-Copy code
+- Widget Tests:<br>
+
 flutter test test/widget
-Integration Tests:<br>
 
-bash
-Copy code
+- Integration Tests:<br>
+
 flutter drive --target=test_driver/app.dart
-Testing Coverage
-Unit Tests: Cover key functionalities of model classes like MoodEntry.<br>
-Widget Tests: Validate UI elements such as pie charts, mood lists, and empty state messages.<br>
-Integration Test: Ensures seamless interaction between the provider, database, and UI components.
-API Used
-Random Quotes API<br> Provides dynamic motivational quotes on the Motivational Screen.<br> Example endpoint:<br> https://api.example.com/random-quote
-Challenges Faced
-State Management: Debugging provider updates and ensuring correct notifications to widgets.<br>
-Integration Testing: Managing asynchronous interactions between UI and database.
-Reflection
-Building the Mood Tracker App was a rewarding experience that improved my skills in Flutter development, state management, and testing. While debugging and testing proved challenging, the satisfaction of delivering a functional and user-friendly app made it worthwhile.
+
+**Testing Coverage**
+
+- Unit Tests: Cover key functionalities of model classes like MoodEntry.<br>
+- Widget Tests: Validate UI elements such as pie charts, mood lists, and empty state messages.<br>
+- Integration Test: Ensures seamless interaction between the provider, database, and UI components. <br>
+
+**API Used**
+
+- Random Quotes API<br> Provides dynamic motivational quotes on the Motivational Screen.<br> Example endpoint:<br> https://api.example.com/random-quote<br>
+  
+**Reflection**
+
+- Building the Mood Tracker App was a rewarding experience that improved my skills in Flutter development, state management, and testing. While debugging and testing proved challenging, the satisfaction of delivering a functional and user-friendly app made it worthwhile.
