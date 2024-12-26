@@ -1,74 +1,100 @@
-# CS 442 MP6: Final Project
+Mood Tracker App
+A Flutter-based Mood Tracker application that allows users to record, track, and visualize their emotional patterns over time. The app features mood recording, local data persistence, and motivational quotes, offering a seamless and interactive user experience.
 
-## 1. Overview
+Features
+Mood Recording
+Users can record their mood with notes and view their entries over time.
 
-This last machine problem in the class is an open-ended one. You will be building a mobile application of your choice using the Flutter framework. You are free to choose any application domain you like, but your application must meet the requirements described below.
+Data Visualization
+View mood trends with dynamic pie charts using the fl_chart package.
 
-## 2. Requirements
+Motivational Quotes
+Displays a new motivational quote from an external Quotes API every time the app is opened.
 
-Your application must meet the following high-level requirements:
+Data Persistence
+Uses SQLite for local data storage, ensuring mood entries are saved and persist across app launches.
 
-1. There should be at least 3 separate screens/pages in your application, each of which should be implemented as a separate widget. One of these pages should be the default "home" page that is displayed when the application is first launched. Navigation between pages can be implemented using any of the standard Flutter mechanisms (e.g., `Navigator`, `TabBar`, `BottomNavigationBar`, etc.).
-2. At least one of the pages in your application should be backed by a stateful widget, which in turn should be backed by a custom model class. The model class should encapsulate the data that is displayed/manipulated on the page. You may choose to use any of the mechanisms we discussed in class (e.g., `setState`, `ChangeNotifier`, `Provider`, etc.) to update the UI on model object updates.
-3. Your app should persist some user-updateable data across application launches in some way. You can use any of the mechanisms we discussed for doing so (e.g., `SharedPreferences`, `sqflite`, etc.).
-4. Your app should access some data from an external source (e.g., a RESTful API or a cloud database like Cloud Firestore) and display it in some way. You may use the `http` package, or other third-party packages, to do so. The accessed data should be dynamic in some way (i.e., it should change over time, whether in response to user input or external events).
-5. Your app should include unit, widget, and integration tests.
+State Management
+Built with a stateful widget backed by a custom model class, ensuring dynamic updates throughout the app.
 
-### 2.1. Implementation details
+Platform Compatibility
+The app supports iOS simulators and Android emulators.
 
-Becaause of the open-ended nature of this machine problem, we will not be providing any starter code. You are free to use any of the code we went over in class as a starting point, but you are not required to do so. All code you submit should be your own.
+Comprehensive Testing
+Includes:
 
-Though you may use third-party libraries (as described in the next section), the main business logic of your application should be written by you and not outsourced. You should not use any code that you find online or in other sources.
+5+ Unit Tests: To validate model functionality.
+5+ Widget Tests: To verify UI elements and their behavior.
+1 Integration Test: To test workflows and interactions across the app.
+Screens
+Home Screen
+Displays a pie chart summarizing mood data and a list of all recorded moods.
 
-### 2.2. External packages
+Add Mood Screen
+Allows users to add new mood entries, including a dropdown for mood selection and a text field for notes.
 
-We have included the following packages in the `pubspec.yaml` file:
+Motivational Screen
+Displays a rotating motivational quote fetched from the external Quotes API.
 
-- [`collection`](https://pub.dev/packages/collection): a library that provides a set of additional data structures and utilities
-- [`flutter_test`](https://pub.dev/packages/flutter_test): a library that provides a set of utilities for writing widget tests
-- [`http`](https://pub.dev/packages/http): a library that provides a set of high-level asynchronous functions for communicating with HTTP servers
-- [`integration_test`](https://pub.dev/packages/integration_test): a library that provides a set of utilities for writing integration tests
-- [`mockito`](https://pub.dev/packages/mockito): a library that provides a set of utilities for mocking classes and objects
-- [`path`](https://pub.dev/packages/path): a library that provides a set of utilities for manipulating paths
-- [`path_provider`](https://pub.dev/packages/path_provider): a library that provides a set of utilities for locating files/directories on the filesystem
-- [`provider`](https://pub.dev/packages/provider): a library that provides a set of utilities for managing and disseminating stateful data
-- [`shared_preferences`](https://pub.dev/packages/shared_preferences): a library that provides a persistent store for simple data
-- [`sqflite`](https://pub.dev/packages/sqflite): a library that wraps SQLite functionality for use in Flutter applications
-- [`test`](https://pub.dev/packages/test): a library that provides a set of utilities for writing unit tests
+Technologies Used
+Flutter: Cross-platform app development.
+SQLite: Local data persistence using the sqflite package.
+State Management: Provider-based state management for dynamic UI updates.
+fl_chart: For creating visually engaging pie charts.
+Quotes API: Integration for fetching motivational quotes dynamically.
+Setup and Installation
+Prerequisites
+Ensure you have the following installed on your system:
 
-For this machine problem, you may also make use of other third-party packages found on [pub.dev](https://pub.dev/), provided you request approval in advance.
+Flutter SDK: Install Flutter
+Dart SDK (comes with Flutter)
+iOS Simulator or Android Emulator
+Steps
+Clone the repository:
 
-## 3. Sample projects
+bash
+Copy code
+git clone https://github.com/your-username/mood-tracker-app.git
+cd mood-tracker-app
+Install dependencies:
 
-Here are some ideas for projects that satisfy the requirements above:
+bash
+Copy code
+flutter pub get
+Run the app on your preferred device:
 
-1. Stock/Cryptocurrency tracker: an app that allows the user to search for and track stock or cryptocurrency prices. The user can add stocks/cryptocurrencies to a watchlist, and the app will display the current price and price history. The watchlist can be persisted. Price data can be retrieved from a financial data API (e.g., [Alpha Vantage](https://www.alphavantage.co) or [CoinAPI](https://www.coinapi.io/))
+bash
+Copy code
+flutter run
+Testing
+Run the following commands to execute tests:
 
-2. GitHub repository browser: an app that allows the user to browse GitHub repositories and view some of their details. The repository data should be retrieved from the [GitHub REST API](https://docs.github.com/en/rest). A list of favorite repositories can be persisted.
+Unit Tests:
 
-3. News reader: an app that allows the user to search for and browse news articles from a news API (e.g., [NewsAPI](https://newsapi.org/)). Previous searches and bookmarked/read articles can be persisted.
+bash
+Copy code
+flutter test test/unit
+Widget Tests:
 
-4. Todo-list/Task manager: an app that allows the user to create and manage task lists (maybe with categories or sublists) persisted in a cloud database. Some form of user identification/authentication (for collaboration) may be implemented.
+bash
+Copy code
+flutter test test/widget
+Integration Tests:
 
-## 4. Testing
-
-In your `REPORT.md` file, please indicate which of the listed platforms you have tested your app on. We will test your application by building and running it in one of your selected platforms, and manually verifying that it meets the requirements outlined above, based on additional information you provide in your report.
-
-Additionally, you must also include a test suite comprising the following:
-
-- At least 5 distinct unit tests that focus on testing the functionality of your model classes.
-- At least 5 distinct widget tests that focus on testing the functionality of your custom widgets.
-- At least one integration test group that demonstrates the correctness of some core feature(s) of your app.
-
-## 5. Grading
-
-This machine problem is worth 50 points, broken down as follows:
-
-- 2 points: a completed `REPORT.md` file with the required information. Because of the flexible nature of this MP, we ask that you include more information that will help us test and evaluate your work. Please read and complete the report file carefully. **Without this we will not evaluate your submission!**
-- 8 points: there should be at least 3 separate screens/pages in your application, each of which should be implemented as a separate widget, and can be reach either as the "home" page or via some form of navigation.
-- 10 points: at least one of the pages in your application should be backed by a stateful widget, which in turn should be backed by a custom model class, which makes use of some form of state management.
-- 10 points: some user-updateable data is correctly persisted across application launches (either locally or in the cloud).
-- 10 points: some data is dynamically accessed from an external source (e.g., a RESTful or cloud-based API) and displayed it in some way.
-- 10 points: the requisite number of unit, widget, and integration tests are included, and they pass.
-
-**If your code does not build, you will receive a zero for the machine problem.**
+bash
+Copy code
+flutter drive --target=test_driver/app.dart
+Testing Coverage
+Unit Tests: Cover key functionalities of model classes like MoodEntry.
+Widget Tests: Validate UI elements such as pie charts, mood lists, and empty state messages.
+Integration Test: Ensures seamless interaction between the provider, database, and UI components.
+API Used
+Random Quotes API
+Provides dynamic motivational quotes on the Motivational Screen.
+Example endpoint:
+https://api.example.com/random-quote
+Challenges Faced
+State Management: Debugging provider updates and ensuring correct notifications to widgets.
+Integration Testing: Managing asynchronous interactions between UI and database.
+Reflection
+Building the Mood Tracker App was a rewarding experience that improved my skills in Flutter development, state management, and testing. While deb
