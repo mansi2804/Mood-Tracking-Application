@@ -10,7 +10,7 @@ A Flutter-based Mood Tracker application that allows users to record, track, and
 
 - Motivational Quotes<br> Displays a new motivational quote from an external Quotes API every time the app is opened.<br>
 
-- Data Persistence<br> Uses SQLite for local data storage, ensuring mood entries are saved and persist across app launches.<br>
+- Data Persistence<br> Uses SQfLite for local data storage, ensuring mood entries are saved and persist across app launches.<br>
 
 - State Management<br> Built with a stateful widget backed by a custom model class, ensuring dynamic updates throughout the app.<br>
 
