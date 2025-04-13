@@ -2,7 +2,7 @@
 <br>
 A Flutter-based Mood Tracker application that allows users to record, track, and visualize their emotional patterns over time. The app features mood recording, local data persistence, and motivational quotes, offering a seamless and interactive user experience. <br>
    
-**Features**  
+**Features**
 <br>  
 - Mood Recording<br> Users can record their mood with notes and view their entries over time.<br>
 
